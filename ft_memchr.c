@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 15:40:58 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/18 12:11:37 by oamkhou          ###   ########.fr       */
+/*   Created: 2025/10/18 11:31:06 by oamkhou           #+#    #+#             */
+/*   Updated: 2025/10/18 11:37:15 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s,  int start, size_t len)
+void	*ft_memchr(const void *s, int c,size_t n)
 {
-	char	*alloc;
 	size_t	i;
+	const unsigned char *str;
 
-
-	// size = ft_strlen(s + start);
-	alloc = malloc(len + 1);
-	
-	if(!alloc)
-	{
-		return (NULL);
-	}
+	str= (const unsigned char *)s;
 	i = 0;
-	while(i < len )
+	while(i < n)
 	{
-		alloc[i] = s[i];
+		if(str[i] == (unsigned char )c)
+		{
+			return ((void *)(str + i));
+		}
+		i++;
 	}
-	return (alloc);
-	
-  
+	return (NULL);
 }
 
-int main()
-{
-	const char s[]="oussama";
-	printf("%p",ft_substr(s,2,4));
-	
-}
+// int main()
+// {
+// 	char s[] = "oussama";
+
+// 	printf("%s\n", (char *)ft_memchr(s, 's', 5)); // prints "ssama"
+// 	printf("%p\n", ft_memchr(s, 'z', 5));         // prints (nil)
+// }

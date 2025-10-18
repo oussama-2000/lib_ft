@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:19:49 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/17 22:40:59 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/18 12:05:33 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (NULL);
     
     i = 0;
-    while(i < s1_len )
+    while (i < s1_len )
     {
         result[i] = s1[i];
         i++;

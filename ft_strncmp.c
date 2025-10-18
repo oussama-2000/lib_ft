@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 15:40:58 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/18 12:11:37 by oamkhou          ###   ########.fr       */
+/*   Created: 2025/10/18 11:21:30 by oamkhou           #+#    #+#             */
+/*   Updated: 2025/10/18 11:29:59 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s,  int start, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*alloc;
 	size_t	i;
-
-
-	// size = ft_strlen(s + start);
-	alloc = malloc(len + 1);
 	
-	if(!alloc)
+	while(i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-		return (NULL);
+		if(s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+		i++;
 	}
-	i = 0;
-	while(i < len )
-	{
-		alloc[i] = s[i];
-	}
-	return (alloc);
-	
-  
+	return (0);
 }
 
-int main()
-{
-	const char s[]="oussama";
-	printf("%p",ft_substr(s,2,4));
+
+// int main()
+// {
+// 	char *t1="oussama";
+// 	char *t2="ousama";
+
+// 	// printf("%d\n",strncmp(t1,t2,7));
+// 	printf("%d\n",ft_strncmp(t2,t1,7));
 	
-}
+// }

@@ -1,43 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 15:40:58 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/18 12:11:37 by oamkhou          ###   ########.fr       */
+/*   Created: 2025/10/18 10:32:38 by oamkhou           #+#    #+#             */
+/*   Updated: 2025/10/18 11:02:59 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s,  int start, size_t len)
+char	*ft_strchr(const char *s,int c)
 {
-	char	*alloc;
-	size_t	i;
-
-
-	// size = ft_strlen(s + start);
-	alloc = malloc(len + 1);
+	int	i;
+	i = 0;
 	
-	if(!alloc)
+	if(!s)
 	{
 		return (NULL);
 	}
-	i = 0;
-	while(i < len )
+	while(s[i])
 	{
-		alloc[i] = s[i];
+		if(s[i] == (char)c)
+		{
+			return ((char *)(s + i));
+
+		}
+		i++;
 	}
-	return (alloc);
-	
-  
+	if(c == '\0')
+	{
+		return ((char *)(s + i));
+	}
+	return (NULL);
 }
 
-int main()
-{
-	const char s[]="oussama";
-	printf("%p",ft_substr(s,2,4));
-	
-}
+// int main()
+// {
+// 	const char txt[]="oussama";
+
+// 	char *test=ft_strchr(txt,'\0');
+// 	if(test == NULL)
+// 	{
+// 		printf("not found \n");
+		
+// 	}
+// 	else{
+// 		printf("found :");
+// 		printf("%s\n",test);
+// 	}
+
+// }
