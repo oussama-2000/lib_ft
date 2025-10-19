@@ -6,21 +6,20 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:48:05 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/14 11:20:52 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/18 15:22:26 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isprint(int  c)
+int	ft_isprint(int c)
 {
-    if(c <= 32 || c >= 127)
-    {
-        return (0);
-    }
-    return (1);
+	if (c <= 32 || c >= 127)
+	{
+		return (0);
+	}
+	return (1);
 }
-
 // int main()
 // {
 //     printf("%d",ft_isprint(13));

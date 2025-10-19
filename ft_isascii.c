@@ -6,21 +6,20 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:42:41 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/14 10:47:00 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/18 15:18:20 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isascii(int  c)
+int	ft_isascii(int c)
 {
-    if(c >= 0 && c <= 127)
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	return (0);
 }
-
 // int main()
 // {
 //     printf("%d",ft_isascii(128));

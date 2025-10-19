@@ -6,21 +6,20 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:29:04 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/14 10:42:09 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/18 15:17:46 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isalnum(int  c)
+int	ft_isalnum(int c)
 {
-    if(ft_isalpha(c) || ft_isdigit(c))
-    {
-        return (1);
-    }
-    return (0);
+	if (ft_isalpha(c) || ft_isdigit(c))
+	{
+		return (1);
+	}
+	return (0);
 }
-
 // int main()
 // {
 //     printf("%d",ft_isalnum(97));

@@ -6,26 +6,25 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:21:39 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/15 10:59:07 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/18 15:24:30 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t     ft_strlen(const char  *str)
+size_t	ft_strlen(const char *str)
 {
-    int     len;
+	size_t	len;
 
-    len =0;
-    while(str[len] != '\0' )
-    {
-        len ++;
-    }
-    return (len);
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
 }
-
 // int main()
 // {
 //     char txt[]="oussama";
-//     printf("%d",ft_strlen(txt));
+//     printf("%ld",ft_strlen(txt));
 // }

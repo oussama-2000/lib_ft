@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:42:49 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/18 11:51:28 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/18 16:07:04 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ char	*ft_strrchr(const char *s, int c);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c,size_t n);
 char	*ft_strnstr(const char *txt, const char *query, size_t len);
+char	*ft_strdup(const char *s);
 
 #endif
