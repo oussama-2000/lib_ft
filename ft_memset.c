@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:34:29 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/18 15:54:32 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/19 18:07:14 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,23 @@ void	*ft_memset(void *str, int c, size_t n)
 }
 // int main()
 // {
-//     char txt[] = "oussama";
-//     size_t size = (sizeof(char) * 2);
-//     printf("%s\n",ft_memset(txt,'a',size));
-//     printf("%s\n",memset(txt,255,size));
+//     // char txt[] = "oussama";
+//     // size_t size = (sizeof(char) * 2);
+//     // printf("%s\n",ft_memset(txt,'a',size));
+//     // printf("%s\n",memset(txt,255,size));
 
-//     // int numbers[]={1,2,3,4,5};
+//     int numbers[]={1,2,3,4,5};
 
-//     // size_t size = (sizeof(int) * 4);
-//     // printf("size : %d\n",size);
+//     size_t size = (sizeof(int) * 4);
+//     printf("size : %d\n",size);
 
-//     // ft_memset(numbers,0,size);
-//     // int i = 0;
-//     // while(i < 5)
-//     // {
-//     //     printf("%d\n",numbers[i]);
-//     //     i++;
-//     // }
-
+//     ft_memset(numbers,0,size);
+//     int i = 0;
+//     while(i < 5)
+//     {
+//         printf("%d\n",numbers[i]);
+//         i++;
+//     }
 // }
+
+

@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 14:36:12 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/18 16:06:06 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/19 15:30:08 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t		i;
-	char		*d;
-	const char	*s;
+	size_t				i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	d = dest;
-	s = src;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (!dest && !src)
+	{
+		return (NULL);
+	}
 	i = 0;
 	while (i < n)
 	{
@@ -28,20 +32,19 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
 // int main()
 // {
 // 	char dest[10] = "oussama";
-// 	const char src[] = "oussama";
+// 	const char src[] = "oussam";
 
-// 	ft_memcpy(dest, src, (sizeof(char) * 7));
+// 	memcpy(dest, src, (sizeof(char) * 7));
 
 // 	printf("%s\n", dest);
 
 // 	// int dest[10];
 
 // 	// const int src[]={1,2,3,4,5};
-// 	// memcpy(dest,src,(sizeof(int)*3));
+// 	// ft_memcpy(dest,src,(sizeof(int)*3));
 
 // 	// int i = 0;
 // 	// while(i < 3)
