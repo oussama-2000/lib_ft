@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:21:30 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/19 00:51:30 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/23 15:08:39 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n)
+	// if (!s1 || !s2) {
+	// 	return 0;
+	// }
+	while (i < n )
 	{
-		if ((unsigned char)s1[i] != (unsigned char)s2[i]
-			|| s1[i] == '\0' || s2[i] == '\0')
-			// if any one (s1 ,s2) ends ,out and don't complete
+		
+		if (s1 && s2 && (s1[i] != s2[i]))
 		{
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		}
@@ -31,8 +33,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 // int main()
 // {
-// 	char *t1="oussama";
-// 	char *t2="ous";
+// 	char *t1=NULL;
+// 	char *t2=NULL;
 
-// 	printf("%d\n",ft_strncmp(t2,t1,7));
+// 	printf("%d\n",strncmp(NULL,NULL,-1));
 // }

@@ -6,13 +6,14 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:21:10 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/22 15:47:44 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/25 17:05:19 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <limits.h>
 #include "libft.h"
-
+// if (num <= 0) //  account for '0' or the '-' sign
+// num = -num; // make positive for digit count while loop
 int	ft_counter(int n)
 {
 	int		ni;
@@ -20,10 +21,10 @@ int	ft_counter(int n)
 
 	num = n;
 	ni = 0;
-	if (num <= 0) //  account for '0' or the '-' sign
+	if (num <= 0)
 	{
 		ni = 1;
-		num = -num; // make positive for digit count while loop
+		num = -num;
 	}
 	while (num > 0)
 	{

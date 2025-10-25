@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:53:52 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/18 20:51:40 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/25 21:54:04 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-// int main()
-// {
-//     char c = 'A';
-
-//     printf("%c\n",ft_tolower(c));
-// }
