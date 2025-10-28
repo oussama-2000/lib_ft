@@ -6,14 +6,15 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:10:01 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/22 21:55:40 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 17:09:00 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // #include <fcntl.h>
 // #include <unistd.h>
-// fd points to a file
+// fd points to a file ; is the link between program and resources
+// kernel is the resources manager 
 // 0-> stdin
 // 1 -> stdout
 // 2-> stderr

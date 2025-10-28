@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:21:10 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/25 17:05:19 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 15:24:26 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "libft.h"
 // if (num <= 0) //  account for '0' or the '-' sign
 // num = -num; // make positive for digit count while loop
+// long : -(-2147483648) causes overflow (can’t be stored in a 32-bit int
 int	ft_counter(int n)
 {
 	int		ni;

@@ -6,12 +6,13 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:40:58 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/19 22:39:03 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 12:50:06 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// allocated empty substring to make us freeing the memory after
+// len : lenght of the created substring
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
@@ -21,9 +22,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-		return (ft_strdup("")); // allocated empty substring to make us freeing the memory after
-	if (len > ft_strlen(s) + start)
-		len = ft_strlen(s) + start;
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	sub = malloc(len + 1);
 	if (!sub)
 		return (NULL);
@@ -42,5 +43,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // int main()
 // {
 // 	const char s[]="oussama";
-// 	printf("%s\n",ft_substr(s,2,2));
+// 	char *ptr=ft_substr(s,1,30);
+// 	printf("%s\n",ptr);
 // }

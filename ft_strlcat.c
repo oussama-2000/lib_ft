@@ -6,12 +6,14 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:43:49 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 00:06:34 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 10:11:31 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//the if in strlcat checks if there’s enough space in dst (using dstsize)
+// to safely append src without overflowing.
+// +1 reserve byte for null terminatior
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;
@@ -21,13 +23,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;
-	// If buffer size is smaller than the existing string, just return.
 	if (dst_len >= dstsize)
 	{
 		return (src_len + dstsize);
 	}
-	// Copy from src to dst until we reach dstsize - 1
-	while (src[i] && dst_len + 1 < dstsize)
+	while (src[i] && dst_len + 1 + i < dstsize)
 	{
 		dst[dst_len + i] = src[i];
 		i++;

@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:57:13 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/23 01:12:34 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 17:25:26 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (n == -2147483648)
 	{
 		ft_putstr_fd("-2147483648", fd);
@@ -34,6 +36,7 @@ void	ft_putnbr_fd(int n, int fd)
 
 // int main()
 // {
-//     ft_putnbr_fd(050,1);
+//     ft_putnbr_fd(2147483648,1);
 //     ft_putchar_fd('\n',1);
+
 // }

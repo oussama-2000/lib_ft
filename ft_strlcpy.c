@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:35:11 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/25 23:49:27 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 10:11:43 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (len);
 }
 
-int main()
-{
-   const char input[]="oussam";
-   char range[5];
+// int main()
+// {
+//    const char input[]="oussam";
+//    char range[5];
 
-   size_t len=ft_strlcpy(range,input,sizeof(range));
-//    printf("%d\n",len);
-   if(len  > sizeof(range))
-   {
-    printf("input is big than the range "); //truncation
-   }
-}
+//    size_t len=ft_strlcpy(range,input,sizeof(range));
+// //    printf("%d\n",len);
+//    if(len  > sizeof(range))
+//    {
+//     printf("input is big than the range "); //truncation
+//    }
+// }

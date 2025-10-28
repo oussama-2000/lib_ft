@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:20:43 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/21 11:18:32 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 15:19:36 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ static size_t	ft_count_words(const char *s, char c)
 	return (count);
 }
 
-void	ft_free_all(char **arr, size_t n)
+// prevents memory leaks
+static void	ft_free_all(char **arr, size_t n)
 {
 	size_t	i;
 
@@ -48,7 +49,8 @@ void	ft_free_all(char **arr, size_t n)
 	free(arr);
 }
 
-int	ft_checker1(char ***res, const char *s, char c)
+// allocate the array of pointers (container)
+static int	ft_alloc(char ***res, const char *s, char c)
 {
 	if (s == NULL)
 	{
@@ -62,7 +64,9 @@ int	ft_checker1(char ***res, const char *s, char c)
 	return (1);
 }
 
-int	ft_checker2(char **res, const char *s, size_t start, size_t i)
+// extracts substring
+// return 1 to avoid undefined behavior
+static int	ft_sub(char **res, const char *s, size_t start, size_t i)
 {
 	*res = ft_substr(s, start, i - start);
 	if (!*res)
@@ -81,7 +85,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (ft_checker1(&res, s, c) == 0)
+	if (ft_alloc(&res, s, c) == 0)
 		return (NULL);
 	while (s[i])
 	{
@@ -92,7 +96,7 @@ char	**ft_split(char const *s, char c)
 			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			if (ft_checker2(&res[j], s, start, i) == 0)
+			if (ft_sub(&res[j], s, start, i) == 0)
 				return (ft_free_all(res, j), NULL);
 			j++;
 		}

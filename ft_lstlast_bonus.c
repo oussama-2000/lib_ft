@@ -1,48 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 10:32:38 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 10:31:39 by oamkhou          ###   ########.fr       */
+/*   Created: 2025/10/27 22:30:52 by oamkhou           #+#    #+#             */
+/*   Updated: 2025/10/28 20:57:46 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
+	while (lst)
 	{
-		if (s[i] == (char)c)
-		{
-			return ((char *)(s + i));
-		}
-		i++;
-	}
-	if (c == '\0')
-	{
-		return ((char *)(s + i));
+		if (lst->next == NULL)
+			return (lst);
+		lst = lst->next;
 	}
 	return (NULL);
 }
+
 // int main()
 // {
-// 	char *txt = "oussama";
+//     t_list *node1;
+//     t_list *node2;
+//     t_list *node3;
 
-// 	char *test = ft_strchr(txt, '\0');
-// 	if (test == NULL)
-// 	{
-// 		printf("not found \n");
-// 	}
-// 	else
-// 	{
-// 		printf("found :");
-// 		printf("%s\n", test);
-// 	}
+//     node1 = ft_lstnew("a");
+//     node2 = ft_lstnew("b");
+//     node3 = ft_lstnew("c");
+
+//     node1->next=node2;
+//     node2->next=node3;
+//     node3->next=NULL;
+//     printf("last node :%p\n",node2->next);
+
+//     t_list *last_node = ft_lstlast(node1);
+
+//     printf("%p\n",last_node);
 // }

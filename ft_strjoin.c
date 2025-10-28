@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:19:49 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/19 23:37:40 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 21:33:31 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	if (!s1 || !s2) // the function will crash because ft_strlen(NULL) is invalid.
+	if (!s1 || !s2)
 		return (NULL);
 	result = malloc((ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!result)
@@ -41,8 +41,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 }
 // int main()
 // {
+// 	char *s2 = "oajsbijb";
 // 	char s1[] = "oussama ";
-// 	char s2[] = "amkhou";
-// 	char *result = ft_strjoin(s1, s2);
-// 	printf("%s\n", result);
+// 	char *result = ft_strjoin(s2, s1);
+// 	// printf("%s\n", result);
+// 	if (!result)
+// 		printf("oussama");
+// 	else
+// 		printf("aimen");
 // }

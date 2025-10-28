@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 15:48:37 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 15:41:42 by oamkhou          ###   ########.fr       */
+/*   Created: 2025/10/28 09:54:41 by oamkhou           #+#    #+#             */
+/*   Updated: 2025/10/28 21:01:19 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// using strdup to duplicate the content to make it freed not just read only.
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	char	*new;
-	unsigned int		i;
-
-	i = 0;
-	if (!f || !s)
-		return (NULL);
-	new = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!new)
-		return (NULL);
-	while (s[i])
-	{
-		new[i] = f(i, s[i]);
-		i++;
-	}
-	new[i] = '\0';
-	return (new);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
-// char upper(unsigned int i, char c)
+
+// void del(void *content)
 // {
-//     return c - 32;
+//     free(content);
 // }
 
 // int main()
 // {
-//     char s[]="oussama";
-//     char *str=ft_strmapi(s,upper);
-//     printf("%s\n",str);
-//     free(str);
+//     t_list *node1;
+//     t_list *node2;
+
+//     node1 = ft_lstnew(ft_strdup("a"));
+//     node2 = ft_lstnew(ft_strdup("b"));
+
+//     node1->next = node2;
+
+//     ft_lstdelone(node1,&del);
 // }

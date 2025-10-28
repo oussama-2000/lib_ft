@@ -6,12 +6,13 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:04:29 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/24 03:08:02 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/26 10:33:27 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// strchr starts from '\0' that's why we dont 
+// handling the null terminator  maching case
 char	*ft_strrchr(const char *s, int c)
 {
 	int	s_len;
@@ -29,7 +30,7 @@ char	*ft_strrchr(const char *s, int c)
 // {
 // 	const char txt[]="oussama";
 
-// 	char *test=ft_strrchr(txt,'s');
+// 	char *test=ft_strrchr(txt,'\0');
 // 	if(test == NULL)
 // 	{
 // 		printf("not found \n");
