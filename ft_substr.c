@@ -6,13 +6,12 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:40:58 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 12:50:06 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/31 17:31:59 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// allocated empty substring to make us freeing the memory after
-// len : lenght of the created substring
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
@@ -40,9 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[j] = '\0';
 	return (sub);
 }
-// int main()
-// {
-// 	const char s[]="oussama";
-// 	char *ptr=ft_substr(s,1,30);
-// 	printf("%s\n",ptr);
-// }

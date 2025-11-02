@@ -6,12 +6,12 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 09:41:32 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 13:14:54 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/31 17:43:18 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// static : to make the function should not be part of the global namespace.
+
 static int	in_set(char c, const char *set)
 {
 	int	i;
@@ -47,9 +47,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, start, end - start));
 }
-// int main()
-// {
-// 	char *str = ft_strtrim(" \noussama 	\n", "\t\n ");
-// 	printf("%s\n", str);
-// 	free(str);
-// }

@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:04:21 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 17:26:04 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/30 15:00:05 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-// int main()
-// {
-//     ft_putendl_fd("oussama",1);
-// }

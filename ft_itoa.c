@@ -6,16 +6,13 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:21:10 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 15:24:26 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/30 21:16:53 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <limits.h>
 #include "libft.h"
-// if (num <= 0) //  account for '0' or the '-' sign
-// num = -num; // make positive for digit count while loop
-// long : -(-2147483648) causes overflow (can’t be stored in a 32-bit int
-int	ft_counter(int n)
+
+static int	ft_counter(int n)
 {
 	int		ni;
 	long	num;
@@ -62,35 +59,3 @@ char	*ft_itoa(int n)
 		out[0] = '-';
 	return (out);
 }
-// int main()
-// {
-// 	char *s;
-
-// 	s = ft_itoa(0);
-// 	printf("0 → %s\n", s);
-// 	free(s);
-
-// 	s = ft_itoa(12345);
-// 	printf("12345 → %s\n", s);
-// 	free(s);
-
-// 	s = ft_itoa(-98765);
-// 	printf("-98765 → %s\n", s);
-// 	free(s);
-
-// 	s = ft_itoa(INT_MAX);
-// 	printf("INT_MAX (%d) → %s\n", INT_MAX, s);
-// 	free(s);
-
-// 	s = ft_itoa(INT_MIN);
-// 	printf("INT_MIN (%d) → %s\n", INT_MIN, s);
-// 	free(s);
-
-// 	s = ft_itoa(-1);
-// 	printf("-1 → %s\n", s);
-// 	free(s);
-
-// 	s = ft_itoa(10);
-// 	printf("10 → %s\n", s);
-// 	free(s);
-// }

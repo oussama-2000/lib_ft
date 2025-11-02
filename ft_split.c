@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:20:43 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 15:19:36 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/11/02 00:56:43 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static size_t	ft_count_words(const char *s, char c)
 	return (count);
 }
 
-// prevents memory leaks
 static void	ft_free_all(char **arr, size_t n)
 {
 	size_t	i;
@@ -49,7 +48,6 @@ static void	ft_free_all(char **arr, size_t n)
 	free(arr);
 }
 
-// allocate the array of pointers (container)
 static int	ft_alloc(char ***res, const char *s, char c)
 {
 	if (s == NULL)
@@ -64,8 +62,6 @@ static int	ft_alloc(char ***res, const char *s, char c)
 	return (1);
 }
 
-// extracts substring
-// return 1 to avoid undefined behavior
 static int	ft_sub(char **res, const char *s, size_t start, size_t i)
 {
 	*res = ft_substr(s, start, i - start);
@@ -104,16 +100,3 @@ char	**ft_split(char const *s, char c)
 	res[j] = NULL;
 	return (res);
 }
-// int main()
-// {
-// 	char s[] = ",,,,.ous,sam,,,,amkhou,"; 
-// 	char **result = ft_split(s, ',');
-// 	int i = 0;
-// 	while (result[i])
-// 	{
-// 		printf("%s\n", result[i]);
-// 		i++;
-// 	}
-// 	free(result);
-// 	// printf("%d\n",ft_count_words(s,','));
-// }

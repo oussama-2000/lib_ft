@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:30:03 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 15:43:06 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/30 15:55:17 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-// void    upper(unsigned int i, char *c)
-// {
-//     // printf("*c -> %d\n",*c);
-//     // printf("c - > %p\n",c);
-//     *c = *c -32;
-// }
-// int main()
-// {
-//     char    s[]="oussama";
-//     ft_striteri(s,upper);
-//     printf("%s\n",s);
-// }

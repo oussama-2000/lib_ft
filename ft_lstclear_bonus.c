@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 10:53:28 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/28 21:03:07 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/30 20:07:05 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//next_node for save the nex node
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
@@ -34,26 +34,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-// void del(void *content)
-// {
-//     free(content);
-// }
-
-// int main()
-// {
-//     t_list *node1;
-//     t_list *node2;
-//     t_list *node3;
-
-//     node1 = ft_lstnew(ft_strdup("b"));
-//     node2 = ft_lstnew(ft_strdup("b"));
-//     node3 = ft_lstnew(ft_strdup("c"));
-
-//     ft_memset(node1->content,'x',sizeof(char));
-
-//     node1->next = node2;
-//     node2->next = node3;
-//     node3->next = NULL;
-
-//     ft_lstclear(&node1,&del);
-// }

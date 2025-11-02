@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 10:32:38 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 10:31:39 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/11/02 00:15:48 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-// int main()
-// {
-// 	char *txt = "oussama";
-
-// 	char *test = ft_strchr(txt, '\0');
-// 	if (test == NULL)
-// 	{
-// 		printf("not found \n");
-// 	}
-// 	else
-// 	{
-// 		printf("found :");
-// 		printf("%s\n", test);
-// 	}
-// }

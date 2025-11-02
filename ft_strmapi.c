@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:48:37 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 15:41:42 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/30 21:18:35 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*new;
+	char				*new;
 	unsigned int		i;
 
 	i = 0;
@@ -31,15 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new[i] = '\0';
 	return (new);
 }
-// char upper(unsigned int i, char c)
-// {
-//     return c - 32;
-// }
-
-// int main()
-// {
-//     char s[]="oussama";
-//     char *str=ft_strmapi(s,upper);
-//     printf("%s\n",str);
-//     free(str);
-// }

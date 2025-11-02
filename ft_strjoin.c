@@ -6,7 +6,7 @@
 /*   By: oamkhou <oamkhou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:19:49 by oamkhou           #+#    #+#             */
-/*   Updated: 2025/10/26 21:33:31 by oamkhou          ###   ########.fr       */
+/*   Updated: 2025/10/30 21:18:23 by oamkhou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i] = '\0';
 	return (result);
 }
-// int main()
-// {
-// 	char *s2 = "oajsbijb";
-// 	char s1[] = "oussama ";
-// 	char *result = ft_strjoin(s2, s1);
-// 	// printf("%s\n", result);
-// 	if (!result)
-// 		printf("oussama");
-// 	else
-// 		printf("aimen");
-// }
